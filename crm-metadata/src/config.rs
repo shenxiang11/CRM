@@ -22,7 +22,7 @@ impl AppConfig {
     pub fn load() -> Result<Self> {
         // read from  ./app.yml, or /etc/config/app.yml, or from env CHAT_CONFIG
         let ret = match (
-            File::open("metadata.yml"),
+            File::open("crm-metadata/metadata.yml"),
             File::open("/etc/config/metadata.yml"),
             env::var("METADATA_CONFIG"),
         ) {

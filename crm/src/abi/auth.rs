@@ -9,12 +9,12 @@ pub struct DecodingKey(Ed25519PublicKey);
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct User {
     pub id: i64,
-    pub ws_id: i64,
-    pub fullname: String,
-    pub email: String,
-    #[serde(skip)]
-    pub password_hash: Option<String>,
-    pub created_at: DateTime<Utc>,
+    // pub ws_id: i64,
+    // pub fullname: String,
+    // pub email: String,
+    // #[serde(skip)]
+    // pub password_hash: Option<String>,
+    // pub created_at: DateTime<Utc>,
 }
 
 // const JWT_DURATION: u64 = 60 * 60 * 24 * 7;

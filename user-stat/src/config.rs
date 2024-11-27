@@ -23,7 +23,7 @@ impl AppConfig {
     pub fn load() -> Result<Self> {
         // read from  ./app.yml, or /etc/config/app.yml, or from env CHAT_CONFIG
         let ret = match (
-            File::open("user_stat.yml"),
+            File::open("user-stat/user_stat.yml"),
             File::open("/etc/config/user_stat.yml"),
             env::var("USER_STAT_CONFIG"),
         ) {
